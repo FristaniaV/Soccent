@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		23AB6A2D2BFB339300B77058 /* SoccentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A2C2BFB339300B77058 /* SoccentApp.swift */; };
-		23AB6A2F2BFB339300B77058 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A2E2BFB339300B77058 /* ContentView.swift */; };
 		23AB6A312BFB339500B77058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AB6A302BFB339500B77058 /* Assets.xcassets */; };
 		23AB6A342BFB339500B77058 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AB6A332BFB339500B77058 /* Preview Assets.xcassets */; };
 		23AB6A3E2BFB339500B77058 /* SoccentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A3D2BFB339500B77058 /* SoccentTests.swift */; };
 		23AB6A482BFB339500B77058 /* SoccentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A472BFB339500B77058 /* SoccentUITests.swift */; };
 		23AB6A4A2BFB339500B77058 /* SoccentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A492BFB339500B77058 /* SoccentUITestsLaunchTests.swift */; };
+		23AB6A5C2BFB33FA00B77058 /* SentimentClassifierNew.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A5B2BFB33FA00B77058 /* SentimentClassifierNew.mlmodel */; };
+		23AB6A5E2BFB35FB00B77058 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A5D2BFB35FB00B77058 /* TestView.swift */; };
+		23AB6A602BFB382900B77058 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A5F2BFB382900B77058 /* HomeView.swift */; };
+		23AB6A622BFB3CA600B77058 /* URLInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A612BFB3CA600B77058 /* URLInputViewModel.swift */; };
+		23AB6A662BFB49A100B77058 /* YouTubeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A652BFB49A100B77058 /* YouTubeAPIService.swift */; };
+		23AB6A682BFB49D500B77058 /* SentimentAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A672BFB49D500B77058 /* SentimentAnalyzer.swift */; };
+		23AB6A6A2BFB51B800B77058 /* SentimentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A692BFB51B800B77058 /* SentimentCardView.swift */; };
+		23AB6A6C2BFB550400B77058 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A6B2BFB550400B77058 /* DashboardView.swift */; };
+		23AB6A702BFC477200B77058 /* FetchCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB6A6F2BFC477200B77058 /* FetchCommentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,6 @@
 /* Begin PBXFileReference section */
 		23AB6A292BFB339300B77058 /* Soccent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soccent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23AB6A2C2BFB339300B77058 /* SoccentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccentApp.swift; sourceTree = "<group>"; };
-		23AB6A2E2BFB339300B77058 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23AB6A302BFB339500B77058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23AB6A332BFB339500B77058 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23AB6A392BFB339500B77058 /* SoccentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +51,15 @@
 		23AB6A432BFB339500B77058 /* SoccentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23AB6A472BFB339500B77058 /* SoccentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccentUITests.swift; sourceTree = "<group>"; };
 		23AB6A492BFB339500B77058 /* SoccentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23AB6A5B2BFB33FA00B77058 /* SentimentClassifierNew.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentClassifierNew.mlmodel; sourceTree = "<group>"; };
+		23AB6A5D2BFB35FB00B77058 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		23AB6A5F2BFB382900B77058 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		23AB6A612BFB3CA600B77058 /* URLInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLInputViewModel.swift; sourceTree = "<group>"; };
+		23AB6A652BFB49A100B77058 /* YouTubeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeAPIService.swift; sourceTree = "<group>"; };
+		23AB6A672BFB49D500B77058 /* SentimentAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentAnalyzer.swift; sourceTree = "<group>"; };
+		23AB6A692BFB51B800B77058 /* SentimentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentCardView.swift; sourceTree = "<group>"; };
+		23AB6A6B2BFB550400B77058 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		23AB6A6F2BFC477200B77058 /* FetchCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				23AB6A2C2BFB339300B77058 /* SoccentApp.swift */,
-				23AB6A2E2BFB339300B77058 /* ContentView.swift */,
+				23AB6A5A2BFB33B600B77058 /* MLModel */,
+				23AB6A592BFB33B000B77058 /* Helper */,
+				23AB6A582BFB33AA00B77058 /* ModelView */,
+				23AB6A572BFB33A500B77058 /* Model */,
+				23AB6A562BFB339E00B77058 /* View */,
 				23AB6A302BFB339500B77058 /* Assets.xcassets */,
 				23AB6A322BFB339500B77058 /* Preview Content */,
 			);
@@ -125,6 +145,50 @@
 				23AB6A492BFB339500B77058 /* SoccentUITestsLaunchTests.swift */,
 			);
 			path = SoccentUITests;
+			sourceTree = "<group>";
+		};
+		23AB6A562BFB339E00B77058 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23AB6A5D2BFB35FB00B77058 /* TestView.swift */,
+				23AB6A5F2BFB382900B77058 /* HomeView.swift */,
+				23AB6A692BFB51B800B77058 /* SentimentCardView.swift */,
+				23AB6A6B2BFB550400B77058 /* DashboardView.swift */,
+				23AB6A6F2BFC477200B77058 /* FetchCommentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23AB6A572BFB33A500B77058 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23AB6A582BFB33AA00B77058 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				23AB6A612BFB3CA600B77058 /* URLInputViewModel.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		23AB6A592BFB33B000B77058 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				23AB6A652BFB49A100B77058 /* YouTubeAPIService.swift */,
+				23AB6A672BFB49D500B77058 /* SentimentAnalyzer.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		23AB6A5A2BFB33B600B77058 /* MLModel */ = {
+			isa = PBXGroup;
+			children = (
+				23AB6A5B2BFB33FA00B77058 /* SentimentClassifierNew.mlmodel */,
+			);
+			path = MLModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +321,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23AB6A2F2BFB339300B77058 /* ContentView.swift in Sources */,
+				23AB6A5E2BFB35FB00B77058 /* TestView.swift in Sources */,
+				23AB6A622BFB3CA600B77058 /* URLInputViewModel.swift in Sources */,
+				23AB6A662BFB49A100B77058 /* YouTubeAPIService.swift in Sources */,
+				23AB6A5C2BFB33FA00B77058 /* SentimentClassifierNew.mlmodel in Sources */,
+				23AB6A682BFB49D500B77058 /* SentimentAnalyzer.swift in Sources */,
+				23AB6A702BFC477200B77058 /* FetchCommentView.swift in Sources */,
+				23AB6A602BFB382900B77058 /* HomeView.swift in Sources */,
+				23AB6A6C2BFB550400B77058 /* DashboardView.swift in Sources */,
 				23AB6A2D2BFB339300B77058 /* SoccentApp.swift in Sources */,
+				23AB6A6A2BFB51B800B77058 /* SentimentCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Soccent/Preview Content\"";
+				DEVELOPMENT_TEAM = 9RHVW943AV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Soccent/Preview Content\"";
+				DEVELOPMENT_TEAM = 9RHVW943AV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
