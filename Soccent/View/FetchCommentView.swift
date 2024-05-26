@@ -12,8 +12,9 @@ import CoreML
 struct FetchCommentView: View {
     @State private var urlInput: String = ""
     @State private var comments: [String] = []
-    @State private var sentiments: [String: Int] = ["Positive": 0, "Neutral": 0, "Negative": 0]
+    @State private var sentiments: [String: Double] = ["Positive": 0.0, "Neutral": 0.0, "Negative": 0.0]
     @State private var showComments = false
+    @State private var totalComments = 0
 
     let apiKey = "AIzaSyA1bZad7QO376-RgndxkOsEN9TQw6DBWPQ" 
     
@@ -42,28 +43,53 @@ struct FetchCommentView: View {
                 }
             }
             
+//            Button(action: {
+//                print("URL input: \(urlInput)") // Debugging line
+//                guard let videoID = extractVideoID(from: urlInput) else {
+//                    print("Invalid video ID")  // Debugging line
+//                    return
+//                }
+//                print("Valid video ID: \(videoID)")  // Debugging line
+//                fetchComments(for: videoID, apiKey: apiKey) { fetchedComments in
+//                    DispatchQueue.main.async {
+//                        self.comments = fetchedComments
+//                        self.showComments = true
+//                        let model = try! SentimentClassifierNew(configuration: MLModelConfiguration())
+//                        self.sentiments = analyzeSentiments(comments: fetchedComments, model: model)
+//                    }
+//                }
+//            }) {
+//                Text("Analyze")
+//                    .padding()
+//                    .background(Color.blue)
+//                    .foregroundColor(.white)
+//                    .cornerRadius(8)
+//            }
+            
             Button(action: {
-                print("URL input: \(urlInput)") // Debugging line
-                guard let videoID = extractVideoID(from: urlInput) else {
-                    print("Invalid video ID")  // Debugging line
-                    return
-                }
-                print("Valid video ID: \(videoID)")  // Debugging line
-                fetchComments(for: videoID, apiKey: apiKey) { fetchedComments in
-                    DispatchQueue.main.async {
-                        self.comments = fetchedComments
-                        self.showComments = true
-                        let model = try! SentimentClassifierNew(configuration: MLModelConfiguration())
-                        self.sentiments = analyzeSentiments(comments: fetchedComments, model: model)
-                    }
-                }
-            }) {
-                Text("Analyze")
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
-            }
+                 print("URL input: \(urlInput)") // Debugging line
+                 guard let videoID = extractVideoID(from: urlInput) else {
+                     print("Invalid video ID")  // Debugging line
+                     return
+                 }
+                 print("Valid video ID: \(videoID)")  // Debugging line
+                 fetchComments(for: videoID, apiKey: apiKey) { fetchedComments in
+                     DispatchQueue.main.async {
+                         self.comments = fetchedComments
+                         self.showComments = true
+                         let model = try! SentimentClassifierNew(configuration: MLModelConfiguration())
+                         let sentimentCounts = analyzeSentiments(comments: fetchedComments, model: model)
+                         self.totalComments = fetchedComments.count
+                         self.sentiments = calculatePercentages(sentimentCounts: sentimentCounts, total: self.totalComments)
+                     }
+                 }
+             }) {
+                 Text("Analyze")
+                     .padding()
+                     .background(Color.blue)
+                     .foregroundColor(.white)
+                     .cornerRadius(8)
+             }
             
             
             if showComments {
@@ -78,9 +104,12 @@ struct FetchCommentView: View {
                         .padding()
                     
                     HStack {
-                        Text("Positive: \(sentiments["positive"] ?? 0)")
-                        Text("Neutral: \(sentiments["neutral"] ?? 0)")
-                        Text("Negative: \(sentiments["negative"] ?? 0)")
+//                        Text("Positive: \(sentiments["positive"] ?? 0)")
+//                        Text("Neutral: \(sentiments["neutral"] ?? 0)")
+//                        Text("Negative: \(sentiments["negative"] ?? 0)")
+                        Text("Positive: \(String(format: "%.2f", sentiments["positive"] ?? 0.0))%")
+                        Text("Neutral: \(String(format: "%.2f", sentiments["neutral"] ?? 0.0))%")
+                        Text("Negative: \(String(format: "%.2f", sentiments["negative"] ?? 0.0))%")
                     }
                     .font(.title2)
                     .padding()
