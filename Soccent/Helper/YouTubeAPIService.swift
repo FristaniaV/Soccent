@@ -56,7 +56,7 @@ struct YouTubeCommentResponse: Decodable {
 }
 
 func fetchComments(for videoID: String, apiKey: String, completion: @escaping ([String]) -> Void) {
-    let urlString = "https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=\(videoID)&key=\(apiKey)&maxResults=10"
+    let urlString = "https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=\(videoID)&key=\(apiKey)&maxResults=30"
     guard let url = URL(string: urlString) else {
         print("Invalid URL")
         return

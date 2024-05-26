@@ -11,7 +11,7 @@ import CoreML
 func testModel(inputText: String) -> String {
     do {
         let config = MLModelConfiguration()
-        let model = try SentimentClassifierNew(configuration: config)
+        let model = try SentimentClassifier(configuration: config)
         let prediction = try model.prediction(text: inputText)
 
         return prediction.label

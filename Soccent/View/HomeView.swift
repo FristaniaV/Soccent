@@ -57,10 +57,11 @@ struct HomeView: View {
         .background(
             Image("HomeBg")
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .scaleEffect()
         )
-        .ignoresSafeArea()
+        .ignoresSafeArea(.all)
+        
     }
 }
 
